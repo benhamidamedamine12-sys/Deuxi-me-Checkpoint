@@ -1,0 +1,259 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #edf2ef;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: (3 5 0 20);
+}
+.img {
+  margin-right: 80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+}
+header nav ul {
+  display: flex;
+  gap: 50px;
+  padding-left: 0;
+}
+
+header nav ul li {
+  font-size: 25px;
+  font-weight: bold;
+  list-style: none;
+  animation: slideinfromleft 1s ease-in-out forwards;
+}
+@keyframes slideinfromleft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #101010;
+}
+header nav ul li a:hover {
+  font-size: 30px;
+  color: #0e6ba8;
+  transition: ease-in 0, 5s;
+}
+main {
+  padding: 0;
+  margin: 0;
+}
+#Home {
+  max-height: 650px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #101010;
+}
+#Home img {
+  width: 600px;
+  padding-bottom: 100px;
+}
+#texte-home {
+  padding: 100px;
+  h1 {
+    font-weight: 700;
+    color: #edf2ef;
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 50px;
+    color: #b02e0c;
+  }
+
+  p {
+    font-style: italic;
+    color: #edf2ef;
+    outline: solid 1px #edf2ef;
+    border-radius: 10px;
+    padding: 2%;
+  }
+}
+#Work {
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  background: linear-gradient(#191919, #101010);
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+#Work img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+.project-container h3 {
+  color: #edf2ef;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  /* *** CORRECTION POUR LA BORDURE *** */
+  display: inline-block; /* L'élément prend seulement la largeur du contenu (le texte) */
+  padding: 20px; /* Ajouter de l'espace entre le texte et la bordure */
+
+  border-radius: 10px; /* Optionnel : bords arrondis */
+  /* *** FIN DE LA CORRECTION *** */
+  text-transform: uppercase;
+  /* La propriété display: block; précédente DOIT ÊTRE SUPPRIMÉE, remplacée par inline-block */
+}
+.project-container {
+  padding: 15px;
+  text-align: center;
+  /* *** MODIFICATION : Bordure du conteneur de 2px *** */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project-container h3 {
+  /* *** MODIFICATION : Style Badge + Bordure de 2px *** */
+  color: white; /* Texte blanc pour contraster */ /* Fond rouge/orange */
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-block; /* Pour que le fond ne prenne que la largeur du texte */
+  padding: 8px 15px; /* Espacement intérieur du badge */
+  border-radius: 20px; /* Bords très arrondis pour l'effet badge */
+  text-transform: uppercase;
+  /* AJOUT : Bordure de 2px uniforme au h3 (style Badge) */
+}
+.project-container img {
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+.project-container img:hover {
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  object-fit: cover;
+  scale: 120%;
+  cursor: pointer;
+  transition: ease-in ease-out, 1s;
+  width: 100%;
+  border-radius: 8px;
+}
+#Home img {
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.mesprojets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#Work h1 {
+  padding: 50px;
+  background-color: #edf2ef;
+  font-weight: 800;
+}
+#Resume {
+  max-height: 600px;
+  background-color: #b02e0c;
+  gap: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#Resume img {
+  height: 600px;
+}
+.texte-resume {
+  gap: 20px;
+  display: grid;
+  h1 {
+    font-size: 100px;
+    font-weight: 900;
+    font-style: uppercase;
+    color: #101010;
+  }
+  p {
+    padding: 20px;
+    color: #101010;
+    font-weight: 500;
+  }
+}
+#Contact {
+  /* Centrer le formulaire sur la page et lui donner une largeur maximale */
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9; /* Fond léger */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  font-family: Arial, sans-serif;
+}
+
+/* --- Styles pour les étiquettes (labels) --- */
+label {
+  display: block; /* Chaque label prend toute la largeur */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #101010;
+}
+
+/* --- Styles pour les champs de saisie (inputs) --- */
+input[type="text"],
+input[type="email"] {
+  width: 100%; /* Prend toute la largeur du conteneur */
+  padding: 12px;
+  margin-bottom: 20px; /* Espace après chaque champ */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Inclut padding et border dans la largeur */
+  transition: border-color 0.3s ease; /* Transition douce pour l'effet focus */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #0e6ba8; /* Bordure bleue au focus */
+  outline: none; /* Supprime le contour par défaut du navigateur */
+}
+input[type="submit"] {
+  background-color: #edf2ef;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 50%;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  transition: ease-in 0, 5s;
+  background-color: #0e6ba8;
+  color: #edf2ef;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 50%;
+}
